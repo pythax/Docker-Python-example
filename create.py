@@ -1,17 +1,8 @@
 import sys
 import os
 
-string= """
-
-FROM {}:latest
-COPY {} ./
-RUN pip install -r {}
-WORKDIR /container
-COPY {} ./
-CMD [ "python", "./{}" ]
 
 
-"""
 
 class container:
     def create(self):
@@ -40,4 +31,3 @@ if __name__ == '__main__':
         sys.exit()
     CR = container()
     CR.create()
-    os.system("docker run {}".format(sys.argv[4]))
