@@ -4,7 +4,7 @@ import os
 
 
 
-class container:
+class container_image:
     def create(self):
         string = """
         FROM {}:latest
@@ -29,5 +29,5 @@ if __name__ == '__main__':
         print("Not enough arguments specified. syntax:\n    python create.py <app name> <base image> <requirements file> <result image name>")
         print("\n.\n.\nbase image options: DEBIAN, CENTOS\n")
         sys.exit()
-    CR = container()
+    CR = container_image()
     CR.create()
