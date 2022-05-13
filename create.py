@@ -18,6 +18,7 @@ class container:
         string = """
         FROM {}:latest
         COPY {} ./
+        RUN set -xe \ && apt-get update \ && install python3-pip
         RUN pip install -r {}
         WORKDIR /container
         COPY {} ./

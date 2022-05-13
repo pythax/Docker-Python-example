@@ -18,4 +18,4 @@ async def on_message(message):
     if message.content.startswith('Wyd') or message.content.startswith('wyd') or message.content.startswith('WYD')  :
         await message.channel.send(' Yes yes im here {}, Im containered, come free me.'.format(r))
 
-client.run('')
+client.run('OTc0NzI5NjUzMDQwMzMyODMx.GE7O27.wYMsr9_2L7F6GU4ofbsFKfGzhviUw1ysz-_CYk')
