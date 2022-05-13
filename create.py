@@ -10,10 +10,10 @@ class container:
         FROM {}:latest
         COPY {} ./
         RUN set -xe \ && apt-get update \ && install python3-pip
-        RUN pip install -r {}
+        RUN pip3 install -r {}
         WORKDIR /container
         COPY {} ./
-        CMD [ "python", "./{}" ]
+        CMD [ "python3", "./{}" ]
         """.format(sys.argv[2], sys.argv[3], sys.argv[3], sys.argv[1], sys.argv[1])
         FS = open("dockerfile", "w")
         FS.writelines(string)
