@@ -2,6 +2,7 @@ import discord
 import requests
 
 
+
 client = discord.Client()
 
 @client.event
