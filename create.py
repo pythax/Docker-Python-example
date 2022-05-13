@@ -9,7 +9,8 @@ class container_image:
         string = """
         FROM {}:latest
         COPY {} ./
-        RUN set -xe \ && apt-get update \ && install python3-pip
+        RUN apt-get update 
+        RUN apt-get -y install python3-pip
         RUN pip3 install -r {}
         WORKDIR /container
         COPY {} ./
